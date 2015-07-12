@@ -56,7 +56,6 @@ public class PointExample {
 			glEnd();
 			
 			
-			glColor3f(0, 1, 0);
 			glPushMatrix();
 			
 			if(Keyboard.isKeyDown(Keyboard.KEY_RIGHT)){
@@ -80,7 +79,9 @@ public class PointExample {
 			glRotatef(rotate, 0, 1, 0);
 			glRotatef(rotate, 1.0f, 0f, 0.0f);
 			
+			
 			glBegin(GL_POINTS);
+			glColor3f(0, 1, 0);
 				
 				for (float i=0;i<(2*PI)*4;i+=0.1){
 					y=(float) (length*Math.sin(i));
@@ -91,10 +92,6 @@ public class PointExample {
 				}
 			glEnd();
 			
-			glBegin(GL_POINTS);
-				glColor3f(1, 0, 0);
-				glVertex2f(10,10);
-			glEnd();
 			
 			glPopMatrix();
 			Display.update();
