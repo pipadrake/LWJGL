@@ -6,7 +6,7 @@ import org.lwjgl.opengl.DisplayMode;
 
 import static org.lwjgl.opengl.GL11.*;
 
-public class DisplayExample {
+public class TriangleStripExample {
 	public void start(){
 		try {
 			Display.setDisplayMode(new DisplayMode(800, 600));
@@ -35,6 +35,9 @@ public class DisplayExample {
 		while(!Display.isCloseRequested()){
 			
 			
+			glBegin(GL_TRIANGLE_STRIP);
+			
+			glEnd();
 			
 			Display.update();
 		}
@@ -42,7 +45,7 @@ public class DisplayExample {
 	}
 	
 	public static void main(String[] args) {
-		DisplayExample display=new DisplayExample();
+		TriangleStripExample display=new TriangleStripExample();
 		display.start();
 	}
 }
